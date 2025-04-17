@@ -1,0 +1,578 @@
+<html>
+    <head>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+:root {
+  --primary-color: #003366;
+  --accent-color: #00509e;
+  --bg-color: #f0f2f5;
+  --card-bg: #ffffff;
+  --section-bg: #f9fafc;
+  --border-color: #ccd6dd;
+  --label-color: #2c3e50;
+  --text-muted: #555;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: 'Georgia';
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg-color);
+  color: var(--label-color);
+}
+
+h1 {
+  text-align: center;
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin: 1.5rem 0;
+}
+
+.form-page {
+  width: 8.5in;
+  max-width: 100%;
+  min-height: 11in;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background-color: var(--card-bg);
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.form-header,
+.form-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid var(--border-color);
+  padding-bottom: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.form-footer {
+  border-top: 2px solid var(--border-color);
+  border-bottom: none;
+  padding-top: 1rem;
+  margin-top: 2rem;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.form-section {
+  margin-bottom: 2rem;
+}
+
+.outlined-form-section {
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  background-color: var(--section-bg);
+}
+
+.outlined-form-section-title {
+  font-weight: 600;
+  font-size: 1.1rem;
+  background-color: #e7f0fb;
+  padding: 0.75rem 1rem;
+  margin: -1rem -1.25rem 1rem -1.25rem;
+  border-radius: 8px 8px 0 0;
+  color: var(--primary-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.options-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.option-entry {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-width: 220px;
+}
+
+input[type="checkbox"] {
+  transform: scale(1.2);
+  accent-color: var(--primary-color);
+  cursor: pointer;
+}
+
+input[type="text"],
+input[type="date"],
+textarea {
+  width: 100%;
+  max-width: 350px;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  font-size: 0.95rem;
+  margin-top: 0.25rem;
+  background-color: white;
+}
+
+textarea {
+  min-height: 90px;
+  resize: vertical;
+}
+
+label {
+  font-size: 0.95rem;
+  color: var(--label-color);
+  cursor: pointer;
+}
+
+.date-entry,
+.extra-input {
+  display: inline-block;
+  margin-left: 0.5rem;
+}
+
+.pain-row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding-top: 1rem;
+}
+
+.pain-status-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.screen-only {
+  display: block;
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.screen-only button {
+  background-color: var(--primary-color);
+  color: #fff;
+  font-size: 1rem;
+  padding: 0.75rem 2rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.screen-only button:hover {
+  background-color: var(--accent-color);
+}
+
+@media print {
+  body {
+    background: white;
+  }
+
+  .form-page {
+    box-shadow: none;
+    margin: 0;
+    padding: 1in;
+    width: 100%;
+    height: auto;
+  }
+
+  .screen-only {
+    display: none;
+  }
+}
+
+        </style>
+    </head>
+<body>
+    <!-- Page 1 -->
+    <div style="display: flex; align-items: flex-start; justify-content: space-between; padding: 0 10px;">
+    <!-- Logo on the left -->
+    <div style="flex: 0 0 auto;">
+      <img src="p.jpg" alt="Company Logo" style="height: 120px;" />
+    </div>
+  
+    <!-- Center Text (Address Block) -->
+    <div style="flex: 1; text-align: center; padding: 0 20px;">
+      <h3 style="font-family: 'Georgia', serif; font-weight: bold; font-size: 24px;"></h3>
+      <p style="margin: 0;">333 Broadway, Winnipeg, MB R3C 4W3</p>
+      <p style="margin: 0;">Phone: (204) 954-4321 | Toll Free: 1-855-954-4321</p>
+      <p style="margin: 0;"><a href="https://wcb.mb.ca">wcb.mb.ca</a></p>
+    </div>
+  
+    <!-- Heading & Claim Box on the right -->
+    <div style="flex: 0 0 auto; text-align: right;">
+      <h3 style="font-family: 'Tahoma', serif; font-weight: bold; font-size: 24px;">
+      <h3 style="margin: 0;">Medical & Travel Expense Request</h3>
+      <div style="border: 1px solid #000; padding: 5px 15px; margin-top: 5px; border-radius: 4px; display: inline-block;">
+        <strong>Claim No. 20042047</strong>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  
+
+        
+        <h1>Worker Progress Report</h1>
+        
+        <div class="claim-id">
+            Claim No. <span id="claim-id">20042047 WP</span>
+        </div>
+        
+        <div class="form-section outlined-form-section">
+            <p><strong></strong></p>
+            <p>Madeleine Willson provided the following updates in relation to their claim:</p>
+        </div>
+        
+        <div class="form-section outlined-form-section">
+            <div class="outlined-form-section-title">Return to Work</div>
+            <div class="options-row rtw-status-group">
+                <div class="option-entry">
+                    <input type="checkbox" id="not-missed-work" name="rtw-status" enabled>
+                    <label for="not-missed-work">I have not missed from work</label>
+                </div>
+                <div class="option-entry">
+                    <input type="checkbox" id="not-returned" name="rtw-status" enabled>
+                    <label for="not-returned">I have not returned to work</label>
+                </div>
+                <div class="option-entry">
+                    <input type="checkbox" id="returned" name="rtw-status" checked enabled>
+                    <label for="returned">I returned to work on: <span class="date-entry"><input type="date"></span></label>
+                    
+                </div>
+            </div>
+            
+            
+            <p>I am working:</p>
+            <div class="options-row working-group">
+                <div class="option-entry">
+                    <input type="checkbox" id="full-duties-regular" name="work-status" enabled>
+                    <label for="full-duties-regular">Full duties, regular
+                        hours</label>
+                </div>
+                <div class="option-entry">
+                    <input type="checkbox" id="full-duties-reduced" name="work-status" enabled>
+                    <label for="full-duties-reduced">Full duties, reduced hours</label>
+                </div>
+                <div class="option-entry">
+                    <input type="checkbox" id="modified-duties-regular" name="work-status" enabled>
+                    <label for="modified-duties-regular">Modified duties, regular hours</label>
+                </div>
+                <div class="option-entry">
+                    <input type="checkbox" id="modified-duties-reduced" name="work-status" enabled>
+                    <label for="modified-duties-reduced">Modified, reduced hours</label>
+                </div>
+                <div class="option-entry">
+                    <input type="checkbox" id="other-work" name="work-status" enabled>
+                    <label for="other-work">Other:<span class="extra-input"><input type="text">
+                    </span></label>
+                </div>
+            </div>
+            
+            <p>My return to work is going:</p>
+            <textarea></textarea>
+            
+            <p>I expect to return to work on: <span class="date-entry"><input type="date"></span></p>
+            
+            <p>I have the following concerns about returning to work:</p>
+            <textarea></textarea>
+            
+            <p>I was most recently in contact with: <span class="extra-input"><input type="text">
+            </span> on <span class="date-entry"><input type="date"></span></p>
+        </div>
+        
+        <div class="form-section outlined-form-section">
+            <div class="outlined-form-section-title">Recovery</div>
+            <div class="options-row recovery-group">
+                <div class="option-entry">
+                    <input type="checkbox" id="not-recovered" name="rec-status" enabled>
+                    <label for="not-recovered">I have not fully recovered from my workplace
+                        injury.</label>
+                </div>
+                <div class="option-entry">
+                    <input type="checkbox" id="recovered" name="rec-status" checked enabled>
+                    <label for="recovered">I have fully recovered from my workplace
+                        injury.</label>
+                </div>
+            </div>
+            
+            <p>I have provided the following comments about my recovery:</p>
+            <textarea>
+            </textarea>
+        </div>
+        
+        <div class="form-footer">
+            <div>Page 1 of 3</div>
+        </div>
+    </div>
+    
+    <!-- Page 2 -->
+    <div class="form-page">
+        <div class="form-header">
+        </div>
+        
+        <div class="form-section outlined-form-section">
+            <div class="outlined-form-section-title">Pain Assessment</div>
+            <p>I rate my current pain/discomfort on a scale of 1-10, where 1 is no pain and 10 is severe pain out of 10.</p>
+            
+            <div class="pain-row pain-row-group">
+                <div class="pain-status-box">
+                    <input type="checkbox" id="pain-1" name="pain-status" enabled>
+                    <label for="pain-1">1</label>
+                </div>
+                <div class="pain-status-box">
+                    <input type="checkbox" id="pain-2" name="pain-status" enabled>
+                    <label for="pain-2">2</label>
+                </div>
+                <div class="pain-status-box">
+                    <input type="checkbox" id="pain-3" name="pain-status" enabled>
+                    <label for="pain-3">3</label>
+                </div>
+                <div class="pain-status-box">
+                    <input type="checkbox" id="pain-4" name="pain-status" enabled>
+                    <label for="pain-4">4</label>
+                </div>
+                <div class="pain-status-box">
+                    <input type="checkbox" id="pain-5" name="pain-status" enabled>
+                    <label for="pain-5">5</label>
+                </div>
+                <div class="pain-status-box">
+                    <input type="checkbox" id="pain-6" name="pain-status" enabled>
+                    <label for="pain-6">6</label>
+                </div>
+                <div class="pain-status-box">
+                    <input type="checkbox" id="pain-7" name="pain-status" enabled>
+                    <label for="pain-7">7</label>
+                </div>
+                <div class="pain-status-box">
+                    <input type="checkbox" id="pain-8" name="pain-status" enabled>
+                    <label for="pain-8">8</label>
+                </div>
+                <div class="pain-status-box">
+                    <input type="checkbox" id="pain-9" name="pain-status" enabled>
+                    <label for="pain-9">9</label>
+                </div>
+                <div class="pain-status-box">
+                    <input type="checkbox" id="pain-10" name="pain-status" enabled>
+                    <label for="pain-10">10</label>
+                </div>
+            </div>
+        </div>
+        
+        <div class="form-section outlined-form-section">
+            <div class="outlined-form-section-title">Medical Treatment</div>
+            <div class="options-row treatment-group">
+                <div class="option-entry">
+                    <input type="checkbox" id="no-treatment" name="treat-status" checked enabled>
+                    <label for="no-treatment">I am not continuing to
+                        receive medical treatment for
+                        my workplace injury. </label>
+                </div>
+                <div class="option-entry">
+                    <input type="checkbox" id="receiving-treatment" name="treat-status" enabled>
+                    <label for="receiving-treatment">receiving
+                        medical treatment for my
+                        workplace injury from: </label>
+                    <span class="extra-input"><input type="text">
+                    </span>
+                </div>
+            </div>
+            
+            <p>My last medical treatment was <span class="date-entry"><input type="date"></span> from <span class="extra-input"><input type="text">
+            </span></p>
+            
+            <p>My next medical treatment is <span class="date-entry"><input type="date"></span> from <span class="extra-input"><input type="text">
+            </span></p>
+            
+            <p>I am attending a Chiropractor or Physiotherapist <span class="extra-input"></span></p><span class="extra-input"><input type="text">
+            </span>
+        </div>
+        
+        <div class="form-section outlined-form-section">
+            <div class="outlined-form-section-title">Medication</div>
+            <div class="options-row medication-group">
+                <div class="option-entry">
+                    <input type="checkbox" id="no-medication" name="med-status" checked enabled>
+                    <label for="no-medication">I am Not taking medication for my workplace injury</label>
+                </div>
+                <div class="option-entry">
+                    <input type="checkbox" id="taking-medication" name="med-status" enabled>
+                    <label for="taking-medication">I am Taking medication for my workplace injury: <span class="extra-input"><input type="text">
+                    </span></label>
+                </div>
+            </div>
+        </div>
+        
+        <div class="form-section outlined-form-section">
+            <div class="outlined-form-section-title">Home Exercises</div>
+            <div class="options-row exercises-group">
+                <div class="option-entry">
+                    <input type="checkbox" id="no-exercises" name="exercise-status" checked enabled>
+                    <label for="no-exercises">I am not doing home exercises for my workplace
+                        injury. </label>
+                </div>
+                <div class="option-entry">
+                    <input type="checkbox" id="doing-exercises" name="exercise-status" enabled>
+                    <label for="doing-exercises">I am doing home exercises for my workplace
+                        injury. </label>
+                </div>
+            </div>
+            
+            <p>List the exercises you are doing:</p>
+            <textarea></textarea><span><input type="text" style="border: none; outline: none; background: transparent;"></span>
+            
+        </div>
+        
+        <div class="form-section outlined-form-section">
+            <div class="outlined-form-section-title">Other Information</div>
+            <p>I would like to provide the following additional information about my claim/injury:</p>
+            <textarea></textarea><span>
+            </span>
+        </div>
+        
+        <div class="form-footer">
+            <div>Page 2 of 3</div>
+        </div>
+    </div>
+    
+    <!-- Page 3 -->
+    <div class="form-page">
+        <div class="form-header">   
+        
+        </div>
+        
+        <div class="form-section outlined-form-section">
+            <div class="outlined-form-section-title">Certification</div>
+            <input type="checkbox" id="privacy-details" checked enabled>
+            <p>I certify that the information given on this form is true, correct and complete to the best of my knowledge. I agree to notify the Workers Compensation Board of Manitoba (WCB) immediately once I return to any form of work and/or employment. I understand that it is an offence to knowingly make a false statement to the WCB. I also understand that it is an offence to withhold information from WCB which affects my entitlement to compensation (e.g., full or partial recovery from injury, ability to return to work, sources of additional income, etc.). I understand that refusing to co-operate with, or follow my treatment, may result in the WCB reducing or suspending my benefits.</p>
+            
+            <div class="option-entry" style="margin-top: 20px;">
+                <input type="checkbox" id="privacy-details" checked enabled>
+                <p>I understand that the Privacy Notice applies to the personal information collected <br> in this document.</p>
+            </div>
+            
+           
+        </div>
+
+        <div style="text-align: center; margin-top: 30px;" class="screen-only">
+            <button type="submit" style="
+                background-color: #003366;
+                color: white;
+                border: none;
+                padding: 12px 24px;
+                font-size: 16px;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+            ">Submit</button>
+        </div>
+        
+        
+     
+    
+    
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const today = new Date();
+            const formattedDate = today.toLocaleDateString('en-CA', {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric'
+            });
+            
+            document.querySelectorAll('.date-entry:empty').forEach(el => {
+                el.textContent = formattedDate;
+            });
+            
+            // Function to handle single selection checkbox groups
+            function setupCheckboxGroups() {
+                // Return to Work status
+                document.querySelectorAll('input[name="rtw-status"]').forEach(checkbox => {
+                    checkbox.addEventListener('change', function() {
+                        if (this.checked) {
+                            document.querySelectorAll('input[name="rtw-status"]').forEach(cb => {
+                                if (cb !== this) cb.checked = false;
+                            });
+                        }
+                    });
+                });
+                
+                // Working status
+                document.querySelectorAll('input[name="work-status"]').forEach(checkbox => {
+                    checkbox.addEventListener('change', function() {
+                        if (this.checked) {
+                            document.querySelectorAll('input[name="work-status"]').forEach(cb => {
+                                if (cb !== this) cb.checked = false;
+                            });
+                        }
+                    });
+                });
+                
+                // Recovery status
+                document.querySelectorAll('input[name="rec-status"]').forEach(checkbox => {
+                    checkbox.addEventListener('change', function() {
+                        if (this.checked) {
+                            document.querySelectorAll('input[name="rec-status"]').forEach(cb => {
+                                if (cb !== this) cb.checked = false;
+                            });
+                        }
+                    });
+                });
+                
+                // Pain scale
+                document.querySelectorAll('input[name="pain-status"]').forEach(checkbox => {
+                    checkbox.addEventListener('change', function() {
+                        if (this.checked) {
+                            document.querySelectorAll('input[name="pain-status"]').forEach(cb => {
+                                if (cb !== this) cb.checked = false;
+                            });
+                        }
+                    });
+                });
+                
+                // Treatment status
+                document.querySelectorAll('input[name="treat-status"]').forEach(checkbox => {
+                    checkbox.addEventListener('change', function() {
+                        if (this.checked) {
+                            document.querySelectorAll('input[name="treat-status"]').forEach(cb => {
+                                if (cb !== this) cb.checked = false;
+                            });
+                        }
+                    });
+                });
+                
+                // Medication status
+                document.querySelectorAll('input[name="med-status"]').forEach(checkbox => {
+                    checkbox.addEventListener('change', function() {
+                        if (this.checked) {
+                            document.querySelectorAll('input[name="med-status"]').forEach(cb => {
+                                if (cb !== this) cb.checked = false;
+                            });
+                        }
+                    });
+                });
+                
+                // Exercises status
+                document.querySelectorAll('input[name="exercise-status"]').forEach(checkbox => {
+                    checkbox.addEventListener('change', function() {
+                        if (this.checked) {
+                            document.querySelectorAll('input[name="exercise-status"]').forEach(cb => {
+                                if (cb !== this) cb.checked = false;
+                            });
+                        }
+                    });
+                });
+            }
+            
+            // Initialize the checkbox groups
+            setupCheckboxGroups();
+        });
+    </script>
+</body>
